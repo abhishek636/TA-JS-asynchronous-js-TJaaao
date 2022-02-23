@@ -39,6 +39,8 @@ function displayUI(data) {
   image.src = data.avatar_url;
   name.innerText = data.name;
   p.innerText = "@" + data.login;
+  display(`https://api.github.com/users/${data.login}/followers`, followers);
+  display(`https://api.github.com/users/${data.login}/following`, following);
 }
 
 function handleChange(event) {
