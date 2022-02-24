@@ -18,11 +18,11 @@ function fetch(url, successHandler) {
 
 function display(images) {
   div.innerHTML = "";
-    images.forEach((image) => {
-        let img = document.createElement("img");
-        img.src = image.urls.thumb;
-        div.append(img);
-    });
+  images.forEach((image) => {
+    let img = document.createElement("img");
+    img.src = image.urls.thumb;
+    div.append(img);
+  });
 }
 
 fetch(url, display);
@@ -30,12 +30,10 @@ fetch(url, display);
 function handleSearch(event) {
   if (event.keyCode == 13 && input.value) {
     fetch(
-      getSearchUrl(input.value, (search) => {
-        display(search.reasults);
-      })
+      getSearchUrl(input.value, (search) =>{ display(search.reasults);})
     );
     input.value = "";
   }
 }
 
-input.addEventListener("keyup", handleSearch);
+input.addEventListener("keydown", handleSearch);
