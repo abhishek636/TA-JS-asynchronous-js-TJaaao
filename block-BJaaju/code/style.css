@@ -65,16 +65,16 @@ header h1{
     margin-bottom: 2rem;
 }
 input {
-margin: 0.5rem;
-padding: 0.3rem;
+    margin: 0.5rem;
+    padding: 0.3rem;
 }
 
 .image {
-display: grid;
-grid-template-columns: repeat(5, 1fr);
-gap: 1fr;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1fr;
 }
 
 img {
-margin: 0.5rem;
+    margin: 0.5rem;
 }
