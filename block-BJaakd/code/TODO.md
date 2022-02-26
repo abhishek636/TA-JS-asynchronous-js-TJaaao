@@ -126,8 +126,9 @@ let promise = new Promise((res, rej) => {
 ```js
 let first = new Promise((res, rej) => {
   res(1);
-})
-  .then((value) => {
+});
+
+  first.then((value) => {
     console.log(value);
     return 2;
   })
@@ -151,22 +152,27 @@ let first = new Promise((res, rej) => {
 ```js
 let first = new Promise((res, rej) => {
   res(1);
-})
-  .then((value) => {
-    console.log(value);
-    return 2;
-  })
-  .then((value) => {
-    console.log(value);
-    return 3;
-  })
-  .then((value) => {
-    console.log(value);
-    return 4;
-  });
+});
+
+first.then((value) => {
+  console.log(value);
+  return 2;
+});
+first.then((value) => {
+  console.log(value);
+  return 3;
+});
+first.then((value) => {
+  console.log(value);
+  return 4;
+});
 ```
 
 10. Try to understand the difference between the problem 8 and 9. Write your observation.
+
+
+<!-- Question no 8 was done with a chain because in 8 question 1 promise is done after that creat one hander   -->
+<!-- in 9 question their are 1 promise and 3 handelers -->
 
 11. Do the following
 
