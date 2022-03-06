@@ -70,7 +70,7 @@ function createUI(data) {
     input.type = "checkbox";
     input.setAttribute("data-id", todo._id);
     input.checked = todo.isCompleted;
-    input.addEventListener("input", handleToggle(todo._id, todo.isCompleted));
+    input.addEventListener("click", handleToggle(todo._id, todo.isCompleted));
     let p = document.createElement("p");
     p.innerText = todo.title;
     p.addEventListener("dblclick", (event) => handleEdit(event, todo._id));
